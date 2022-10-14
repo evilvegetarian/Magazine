@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace UseCases
 {
-    class ViewCategoryUseCases : IViewCategoryUseCases
+    public class ViewCategoryUseCases : IViewCategoryUseCases
     {
         private readonly ICategoryRepository categoryRepository;
 

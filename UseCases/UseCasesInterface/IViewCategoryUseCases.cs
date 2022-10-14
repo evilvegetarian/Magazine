@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace UseCases
 {
-    interface IViewCategoryUseCases
+    public interface IViewCategoryUseCases
     {
         IEnumerable<Category> Execute();
     }
