@@ -5,6 +5,7 @@ namespace UseCases
 {
     public interface ICategoryRepository
     {
-        public IEnumerable<Category> GetCategories();
+        IEnumerable<Category> GetCategories();
+        void AddCategory(Category category);
     }
 }

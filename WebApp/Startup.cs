@@ -28,8 +28,9 @@ namespace WebApp
 
             services.AddScoped<ICategoryRepository, CategoryInMemoryRepository>();
 
-
             services.AddTransient<IViewCategoryUseCases, ViewCategoryUseCases>();
+            services.AddTransient<IAddCategoryUseCases, AddCategoryUseCases>();
+
 
         }
 
