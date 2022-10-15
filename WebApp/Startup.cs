@@ -27,12 +27,14 @@ namespace WebApp
             services.AddSingleton<WeatherForecastService>();
 
             services.AddScoped<ICategoryRepository, CategoryInMemoryRepository>();
+            services.AddScoped<IProductRepository, ProductInMemoryRepository>();
 
             services.AddTransient<IViewCategoryUseCases, ViewCategoryUseCases>();
             services.AddTransient<IAddCategoryUseCases, AddCategoryUseCases>();
             services.AddTransient<IEditCategoryUseCase, EditCategoryUseCase>();
             services.AddTransient<IGetCategoryByIdUseCase, GetCategoryByIdUseCase>();
             services.AddTransient<IDeleteCategoryUseCase, DeleteCategoryUseCase>();
+            services.AddTransient<IViewProductsUseCase, ViewProductsUseCase>();
 
 
         }
