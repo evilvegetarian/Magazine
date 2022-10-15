@@ -7,5 +7,6 @@ namespace UseCases
     {
         IEnumerable<Category> GetCategories();
         void AddCategory(Category category);
+        void UpdateCategory(Category category);
     }
 }
