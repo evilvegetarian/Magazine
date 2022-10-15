@@ -24,7 +24,7 @@ namespace Plugins.DataStore.InMemory
 
         public void AddCategory(Category category)
         {
-            if(categories.Any(x=>x.Name.Equals(category.Name, StringComparison.OrdinalIgnoreCase))) 
+            if (categories.Any(x => x.Name.Equals(category.Name, StringComparison.OrdinalIgnoreCase)))
                 return;
             var maxId = categories.Max(x => x.CategoryId);
             category.CategoryId = maxId + 1;
@@ -36,13 +36,19 @@ namespace Plugins.DataStore.InMemory
             return categories;
         }
 
+        public Category GetCategoryById(int categoryId)
+        {
+            return categories?.FirstOrDefault(x => x.CategoryId == categoryId);
+        }
+
         public void UpdateCategory(Category category)
         {
-            var categoryToUpdate = categories?.
-                FirstOrDefault(x => x.CategoryId == category.CategoryId);
+            var categoryToUpdate = GetCategoryById(category.CategoryId);
             if (categoryToUpdate != null)
-                categoryToUpdate = category;
-           
+            {
+                categoryToUpdate.Name = category.Name;
+                categoryToUpdate.Description = category.Description;
+            }
 
         }
     }
