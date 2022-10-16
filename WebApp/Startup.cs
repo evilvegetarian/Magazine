@@ -37,6 +37,7 @@ namespace WebApp
             services.AddTransient<IAddProductsUseCase, AddProductsUseCase>();
             services.AddTransient<IEditProductsUseCase, EditProductsUseCase>();
             services.AddTransient<IGetProductByIdUseCase, GetProductByIdUseCase>();
+            services.AddTransient<IDeleteProductsUseCase, DeleteProductsUseCase>();
 
 
         }
