@@ -54,7 +54,6 @@ namespace Plugins.DataStore.InMemory
                 categoryToUpdate.Name = category.Name;
                 categoryToUpdate.Description = category.Description;
             }
-
         }
         public void DeleteCategory(int categoryId)
         {

@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.32510.428
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "WebApp\WebApp.csproj", "{52195AA4-EA26-401E-A24B-DA3E578A5C4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseCases", "UseCases\UseCases.csproj", "{2F3DE5C9-5113-429F-BDD8-41704DBE492C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UseCases", "UseCases\UseCases.csproj", "{2F3DE5C9-5113-429F-BDD8-41704DBE492C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBuisness", "CoreBuisness\CoreBuisness.csproj", "{F3D3F697-212E-4FA6-B65D-9E602EC7C8D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreBuisness", "CoreBuisness\CoreBuisness.csproj", "{F3D3F697-212E-4FA6-B65D-9E602EC7C8D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugins.DataStore.InMemory", "Plugins.DataStore.InMemory\Plugins.DataStore.InMemory.csproj", "{FDF2BFEB-538F-468C-90D7-0A2C5EE58F69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plugins.DataStore.InMemory", "Plugins.DataStore.InMemory\Plugins.DataStore.InMemory.csproj", "{FDF2BFEB-538F-468C-90D7-0A2C5EE58F69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
