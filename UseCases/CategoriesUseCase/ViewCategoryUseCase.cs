@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace UseCases
 {
-    public class ViewCategoryUseCases : IViewCategoryUseCases
+    public class ViewCategoryUseCase : IViewCategoryUseCase
     {
         private readonly ICategoryRepository categoryRepository;
 
-        public ViewCategoryUseCases(ICategoryRepository categoryRepository)
+        public ViewCategoryUseCase(ICategoryRepository categoryRepository)
         {
             this.categoryRepository = categoryRepository;
         }

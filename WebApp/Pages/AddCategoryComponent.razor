@@ -1,7 +1,7 @@
 ﻿@page "/addcategory"
 
 @inject NavigationManager NavigationManager
-@inject IAddCategoryUseCases AddCategoryUseCases
+@inject IAddCategoryUseCase AddCategoryUseCase
 
 <h3>Add Category</h3>
 
@@ -38,7 +38,7 @@
     }
     private void OnValidSubmit()
     {
-        AddCategoryUseCases.Execute(category);
+        AddCategoryUseCase.Execute(category);
         NavigationManager.NavigateTo("/categories");
 
     }

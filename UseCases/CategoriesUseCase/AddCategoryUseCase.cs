@@ -2,11 +2,11 @@
 
 namespace UseCases
 {
-    public class AddCategoryUseCases : IAddCategoryUseCases
+    public class AddCategoryUseCase : IAddCategoryUseCase
     {
         private readonly ICategoryRepository categoryRepository;
 
-        public AddCategoryUseCases(ICategoryRepository categoryRepository)
+        public AddCategoryUseCase(ICategoryRepository categoryRepository)
         {
             this.categoryRepository = categoryRepository;
         }

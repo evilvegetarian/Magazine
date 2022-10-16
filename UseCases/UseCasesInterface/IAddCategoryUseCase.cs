@@ -2,7 +2,7 @@
 
 namespace UseCases
 {
-    public interface IAddCategoryUseCases
+    public interface IAddCategoryUseCase
     {
         void Execute(Category category);
     }

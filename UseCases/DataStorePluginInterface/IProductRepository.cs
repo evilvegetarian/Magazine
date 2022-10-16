@@ -6,5 +6,6 @@ namespace UseCases
     public interface IProductRepository
     {
         IEnumerable<Product> GetProducts();
+        void AddProduct(Product product);
     }
 }
