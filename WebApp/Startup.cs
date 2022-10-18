@@ -27,6 +27,7 @@ namespace WebApp
 
             services.AddScoped<ICategoryRepository, CategoryInMemoryRepository>();
             services.AddScoped<IProductRepository, ProductInMemoryRepository>();
+            services.AddScoped<ITransactionRepository,TransactionInMemoryRepository>();
 
             services.AddTransient<IViewCategoryUseCase, ViewCategoryUseCase>();
             services.AddTransient<IAddCategoryUseCase, AddCategoryUseCase>();
@@ -40,6 +41,8 @@ namespace WebApp
             services.AddTransient<IDeleteProductsUseCase, DeleteProductsUseCase>();
             services.AddTransient<IViewProductsByCategoryId, ViewProductsByCategoryId>();
             services.AddTransient<ISellProductUseCase, SellProductUseCase>();
+            services.AddTransient<IRecordTransactionUseCase, RecordTransactionUseCase>();
+            services.AddTransient<IGetTodayTransactionUseCase, GåtTodayTransactionUseCase>();
 
 
         }
