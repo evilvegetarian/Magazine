@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Plugins.DataStore.InMemory;
+using Plugins.DataStore.SQL;
 using UseCases;
 using WebApp.Data;
 
@@ -25,9 +27,14 @@ namespace WebApp
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
 
+            services.AddDbContext<MarketContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+            });
+
             services.AddScoped<ICategoryRepository, CategoryInMemoryRepository>();
             services.AddScoped<IProductRepository, ProductInMemoryRepository>();
-            services.AddScoped<ITransactionRepository,TransactionInMemoryRepository>();
+            services.AddScoped<ITransactionRepository, TransactionInMemoryRepository>();
 
             services.AddTransient<IViewCategoryUseCase, ViewCategoryUseCase>();
             services.AddTransient<IAddCategoryUseCase, AddCategoryUseCase>();
