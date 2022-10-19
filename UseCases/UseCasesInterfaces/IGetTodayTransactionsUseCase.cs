@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace UseCases
 {
-    public interface IGetTodayTransactionUseCase
+    public interface IGetTodayTransactionsUseCase
     {
         IEnumerable<Transaction> Execute(string cashierName);
     }

@@ -31,7 +31,6 @@ namespace Plugins.DataStore.InMemory
                 return transactions.Where(x =>
                 string.Equals(x.CashierName, cashierName, StringComparison.OrdinalIgnoreCase) &&
                 x.TimeStamp.Date == date.Date);
-
         }
 
         public void Save(string cashierName, int productId, string productName, double price, int beforeQty, int soldQty)
@@ -50,13 +49,22 @@ namespace Plugins.DataStore.InMemory
             {
                 TransactionId = transactionId,
                 ProductId = productId,
-                ProductName= productName,
+                ProductName = productName,
                 TimeStamp = DateTime.Now,
                 Price = price,
                 SoldQty = soldQty,
                 CashierName = cashierName
             });
+        }
 
+        public IEnumerable<Transaction> Search(string cashierName, DateTime startDate, DateTime endDate)
+        {
+            if (string.IsNullOrWhiteSpace(cashierName))
+                return transactions.Where(x => x.TimeStamp >= startDate.Date && x.TimeStamp <= endDate.AddDays(1).Date);
+            else
+                return transactions.Where(x =>
+                string.Equals(x.CashierName, cashierName, StringComparison.OrdinalIgnoreCase) &&
+                 x.TimeStamp >= startDate.Date && x.TimeStamp <= endDate.AddDays(1).Date);
         }
     }
 }

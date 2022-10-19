@@ -8,11 +8,6 @@
         </div>
     </div>
 </div>
-
-
-
-<br />
-
 <br />
 <div class="row">
     <div class="col-4">
@@ -21,7 +16,6 @@
         <SellProductComponent CashierName="@cashierName"
                               SelectedProduct="selectedProduct"
                               OnProductSold="SellProduct"></SellProductComponent>
-
     </div>
     <div class="col">
         <TodayTransactionsComponent @ref="transactionsComponent"></TodayTransactionsComponent>
@@ -46,7 +40,6 @@
         {
             transactionsComponent.LoadTransaction(cashierName);
         }
-
     }
 
     private void SelectProduct(Product product)
@@ -54,6 +47,7 @@
         selectedProduct = product;
 
     }
+
     private void SellProduct(Product product)
     {
         transactionsComponent.LoadTransaction(cashierName);

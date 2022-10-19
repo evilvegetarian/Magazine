@@ -5,11 +5,11 @@ using System.Web;
 
 namespace UseCases
 {
-    public class GеtTodayTransactionUseCase : IGetTodayTransactionUseCase
+    public class GеtTodayTransactionsUseCase : IGetTodayTransactionsUseCase
     {
         private readonly ITransactionRepository transactionRepository;
 
-        public GеtTodayTransactionUseCase(ITransactionRepository transactionRepository)
+        public GеtTodayTransactionsUseCase(ITransactionRepository transactionRepository)
         {
             this.transactionRepository = transactionRepository;
         }
